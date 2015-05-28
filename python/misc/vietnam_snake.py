@@ -37,7 +37,7 @@ def equation(list):
     return list[0] + (13*list[1])/list[2] + list[3] + 12*list[4] - list[5] + \
             list[6]*list[7]/list[8]
 
-def solveVietnamSnake(equation, result, size):
+def solve_vietnam_snake(equation, result, size):
     ''' 
     Find all possible arrangements of a list of some size that 
     satisfies a given equation that is equivalent to some number result
@@ -55,7 +55,14 @@ def solveVietnamSnake(equation, result, size):
     return solutions
 
 # Test out the result
-sols = solveVietnamSnake(equation, 87, 9)
-print(sols)
-print(len(sols))
+sols = solve_vietnam_snake(equation, 87, 9)
+#print(sols)
+print('Number of solutions: {}'.format(len(sols)))
+
+for sol in sols:
+    if equation(sol) > 87 + 0.002 or equation(sol) < 87 - 0.002:
+        print('Incorrect: {}'.format(sol))
+else:
+    print('No incorrect solutions')
+
 

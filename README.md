@@ -2,7 +2,8 @@
 
 ## Completed
 
-Standing ovation: [Python](python/misc/standingOvation.py)
+Standing ovation: [Python](python/misc/standing_ovation.py)
+Vietnam snake: [Python](python/misc/vietnam_snake.py)
 
 ## Unit Tests
 
