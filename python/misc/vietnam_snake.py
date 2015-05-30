@@ -9,7 +9,7 @@
 #   A + (13*B)/C + D + 12*E - F - 11 + (G*H)/I - 10 = 66
 # 
 
-def findPermutations(list):
+def find_permutations(list):
     ''' 
     Given a list of values, return a non-repeating list of all
     permutations of the values.
@@ -24,7 +24,7 @@ def findPermutations(list):
         # swap target value into 0th place
         list[0], list[i] = list[i], list[0]
         # permutations with target value in 0th place
-        subpermutations = findPermutations(list[1:len(list)])
+        subpermutations = find_permutations(list[1:len(list)])
 
         # collect subpermutations for target value
         for subpermutation in subpermutations:
@@ -44,7 +44,7 @@ def solve_vietnam_snake(equation, result, size):
     '''
     solutions = []
     valueList = list(range(1, size+1))
-    permutations = findPermutations(valueList)
+    permutations = find_permutations(valueList)
 
     for permutation in permutations:
         eval = equation(permutation)
@@ -53,16 +53,5 @@ def solve_vietnam_snake(equation, result, size):
             solutions.append(permutation)
 
     return solutions
-
-# Test out the result
-sols = solve_vietnam_snake(equation, 87, 9)
-#print(sols)
-print('Number of solutions: {}'.format(len(sols)))
-
-for sol in sols:
-    if equation(sol) > 87 + 0.002 or equation(sol) < 87 - 0.002:
-        print('Incorrect: {}'.format(sol))
-else:
-    print('No incorrect solutions')
 
 
