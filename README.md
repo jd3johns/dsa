@@ -4,7 +4,7 @@
 
 ### Sorting
 
-Bubble sort: [Python](python/sorting/bubble_sort/bubble_sort.py)
+* Bubble sort: [Python](python/sorting/bubble_sort/bubble_sort.py)
 
 ### Strings
 
