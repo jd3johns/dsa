@@ -8,6 +8,7 @@
 
 ### Strings
 
+* String rotation check: [Python](python/string/is_rotation.py)
 * Simple string compress: [Python](python/string/string_compress.py)
 * String replace: [Python](python/string/string_replace.py)
 
@@ -27,4 +28,4 @@ python -m unittest discover --pattern=test*.py
 
 ## Code Formatting
 
-I use the [Google Python style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html) to format my Python code.
+I use the [Google Python style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html) to format my Python code, and pylint as a quick tool to check adherence to the formatting style.
