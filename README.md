@@ -8,6 +8,7 @@
 
 ### Strings
 
+* Simple string compress: [Python](python/string/string_compress.py)
 * String replace: [Python](python/string/string_replace.py)
 
 ### Miscellaneous
@@ -23,3 +24,7 @@ Python unit tests kept alongside target files in subdirectories, so to run all u
 cd target_directory
 python -m unittest discover --pattern=test*.py
 ``` 
+
+## Code Formatting
+
+I use the [Google Python style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html) to format my Python code.
