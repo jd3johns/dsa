@@ -6,6 +6,10 @@
 
 * Bubble sort: [Python](python/sorting/bubble_sort/bubble_sort.py)
 
+### Linked Lists
+
+* Linked list node implementation: [Python](python/linked_lists/node.py)
+
 ### Strings
 
 * String permutation check: [Python](python/string/is_permutation.py)
@@ -30,3 +34,10 @@ python -m unittest discover --pattern=test*.py
 ## Code Formatting
 
 I use the [Google Python style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html) to format my Python code, and pylint as a quick tool to check adherence to the formatting style.
+
+Install pylint on Debian/Ubuntu and run it on Python source:
+
+```
+sudo apt-get install pylint
+pylint source.py
+```
