@@ -8,6 +8,7 @@
 
 ### Linked Lists
 
+* Linked list removal of node in middle of list: [Python](python/linked_lists/remove_node.py)
 * Linked list duplicate node removal: [Python](python/linked_lists/remove_duplicates.py)
 * Linked list node implementation: [Python](python/linked_lists/node.py)
 
