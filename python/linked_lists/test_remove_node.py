@@ -22,7 +22,7 @@ class TestRemoveNode(unittest.TestCase):
         head.next = node.Node('b')
         head.next.next = node.Node('c')
         in_node = head.next.next
-        outputs = ['a','b']
+        outputs = ['a', 'b']
 
         remove_node.remove_node(in_node)
         n = head
@@ -35,8 +35,8 @@ class TestRemoveNode(unittest.TestCase):
         head.next = node.Node('b')
         head.next.next = node.Node('c')
         in_node = head.next
-        outputs = ['a','c']
-                                            
+        outputs = ['a', 'c']
+
         remove_node.remove_node(in_node)
         n = head
         for value in outputs:
@@ -48,8 +48,8 @@ class TestRemoveNode(unittest.TestCase):
         head.next = node.Node('b')
         head.next.next = node.Node('c')
         in_node = head
-        outputs = ['b','c']
-                                            
+        outputs = ['b', 'c']
+
         remove_node.remove_node(in_node)
         n = head
         for value in outputs:

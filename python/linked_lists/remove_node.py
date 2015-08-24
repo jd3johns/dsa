@@ -1,14 +1,14 @@
 def remove_node(node):
     '''
     Given node is from somewhere in linked list, and we remove
-    it by shifting the values of the nodes and deleting the last node.
+    it by shifting the value of the next node over and deleting the next node.
     '''
     if node is None:
         return
+    if node.next is None: #end node is given
+        node = None
+        return
 
-    while node.next is not None:
-        node.data = node.next.data #shift the values up
-        node = node.next
-
-    node = None #delete final node
+    node.data = node.next.data #shift the value over
+    node.next = node.next.next #remove the redundant node
     return
