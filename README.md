@@ -6,6 +6,18 @@
 
 * Bubble sort: [Python](python/sorting/bubble_sort/bubble_sort.py)
 
+### Searching
+
+* Binary search on an array: [Python](python/searching/binary_search.py)
+
+### Queues
+
+* Simple queue implementation: [Python](python/queues/queue.py)
+
+### Stacks
+
+* Simple stack implementation: [Python](python/stacks/stack.py)
+
 ### Linked Lists
 
 * Linked list removal of node in middle of list: [Python](python/linked_lists/remove_node.py)
