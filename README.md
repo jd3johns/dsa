@@ -10,13 +10,11 @@
 
 * Binary search on an array: [Python](python/searching/binary_search.py)
 
-### Queues
+### Stacks and Queues
 
-* Simple queue implementation: [Python](python/queues/queue.py)
-
-### Stacks
-
-* Simple stack implementation: [Python](python/stacks/stack.py)
+* Implementation of a queue using two stacks: [Python](python/stacks_and_queues/queue_of_stacks.py)
+* Simple queue implementation: [Python](python/stacks_and_queues/queue.py)
+* Simple stack implementation: [Python](python/stacks_and_queues/stack.py)
 
 ### Linked Lists
 

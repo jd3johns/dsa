@@ -32,3 +32,11 @@ class Stack(object):
             return self.top.data
         else:
             return None
+
+    def is_empty(self):
+        ''' Check if stack has any elements '''
+        if self.top is None:
+            return True
+        else:
+            return False
+
