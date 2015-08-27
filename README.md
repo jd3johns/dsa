@@ -4,7 +4,8 @@
 
 ### Sorting
 
-* Bubble sort: [Python](python/sorting/bubble_sort/bubble_sort.py)
+* Heap sort: [Python](python/sorting/heapsort.py)
+* Bubble sort: [Python](python/sorting/bubble_sort.py)
 
 ### Searching
 
