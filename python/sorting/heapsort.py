@@ -55,7 +55,3 @@ def sift_down(array, start, end):
 
     return array
 
-
-if __name__ == "__main__":
-    x = [5,7,8,2,1,0,-1,7,4,5,2,3,10,13,29,0,18]
-    print(heapsort(x))

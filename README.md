@@ -9,6 +9,8 @@
 
 ### Searching
 
+* Breadth-first search on a graph: [Python](python/searching/bfs.py)
+* Depth-first search on a graph: [Python](python/searching/dfs.py)
 * Binary search on an array: [Python](python/searching/binary_search.py)
 
 ### Stacks and Queues
