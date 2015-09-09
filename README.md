@@ -2,6 +2,10 @@
 
 ## Completed
 
+### Graphs
+
+* Dijkstra's single-source shortest-paths algorithm: [Python](python/graphs/dijkstra.py)
+
 ### Sorting
 
 * Mergesort: [Python](python/sorting/mergesort.py)
