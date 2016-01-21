@@ -39,6 +39,7 @@
 
 ### Miscellaneous
 
+* FizzBuzz: [C++](cpp/misc/fizzbuzz.cpp)
 * Standing ovation: [Python](python/misc/standing_ovation.py)
 * Vietnam snake: [Python](python/misc/vietnam_snake.py)
 
