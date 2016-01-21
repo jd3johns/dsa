@@ -7,18 +7,19 @@
 import sys
 import argparse
 
-#
-# Calculate total savings compounded annually.
-#
-# @param: savings -- sum added at beginning of each year
-# @param: interest -- annual interest (ex. 0.03 is 3%)
-# @param: years -- number of years to compute for
-# @param: compound -- as argument is initial savings, as recursive is
-#                     total compounded savings
-#
-# @return: total compounded savings
-#
+
 def compound_savings(savings, interest, years, compound=0):
+    '''
+    Calculate total savings compounded annually.
+
+    @param: savings -- sum added at beginning of each year
+    @param: interest -- annual interest (ex. 0.03 is 3%)
+    @param: years -- number of years to compute for
+    @param: compound -- as argument is initial savings, as recursive is
+                        total compounded savings
+
+    @return: total compounded savings
+    '''
     if years == 0:
         return compound
     else:
