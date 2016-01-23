@@ -1,4 +1,4 @@
-# Data Structures and Algorithms in C, C++, Java, Python, and Go
+# Data Structures and Algorithms in C++ and Python
 
 ## Completed
 
@@ -39,6 +39,8 @@
 
 ### Miscellaneous
 
+* Data type size listing: [C++](cpp/misc/list_data_type_sizes.cpp)
+* String concatenation benchmark: [C++](cpp/misc/string_concat_benchmark.cpp)
 * FizzBuzz: [C++](cpp/misc/fizzbuzz.cpp)
 * Standing ovation: [Python](python/misc/standing_ovation.py)
 * Vietnam snake: [Python](python/misc/vietnam_snake.py)
