@@ -1,3 +1,6 @@
+# General
+playpen/
+
 # Python
 venv/
 *.pyc
