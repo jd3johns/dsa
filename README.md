@@ -32,6 +32,7 @@
 
 ### Strings
 
+* C-string reverse: [C++](cpp/strings/reverse.cpp)
 * String permutation check: [Python](python/string/is_permutation.py)
 * String rotation check: [Python](python/string/is_rotation.py)
 * Simple string compress: [Python](python/string/string_compress.py), [C++](cpp/strings/string_compress.cpp)
