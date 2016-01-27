@@ -39,6 +39,7 @@
 
 ### Miscellaneous
 
+* Codeforces Problem 1A ("Theatre Square"): [C++](cpp/misc/theatre_square.cpp)
 * Data type size listing: [C++](cpp/misc/list_data_type_sizes.cpp)
 * String concatenation benchmark: [C++](cpp/misc/string_concat_benchmark.cpp)
 * FizzBuzz: [C++](cpp/misc/fizzbuzz.cpp)
