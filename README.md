@@ -34,7 +34,7 @@
 
 * String permutation check: [Python](python/string/is_permutation.py)
 * String rotation check: [Python](python/string/is_rotation.py)
-* Simple string compress: [Python](python/string/string_compress.py)
+* Simple string compress: [Python](python/string/string_compress.py), [C++](cpp/strings/string_compress.cpp)
 * String replace: [Python](python/string/string_replace.py)
 
 ### Miscellaneous
