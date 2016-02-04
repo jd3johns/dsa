@@ -132,23 +132,34 @@ def evidence_two(niba_vals):
     possibilities = []
     for niba in niba_vals:
         n, i, b, a = niba
-        digits = set(x) - set(niba)
-        for c in digits:
-            if c == 0:
+        exclude = niba
+
+        for c in x:
+            if c in exclude or c == 0:
                 continue # not possible
-            digits2 = digits - set([c])
-            for o in digits2:
-                digits3 = digits2 - set([o])
-                for e in digits3:
-                    digits4 = digits3 - set([e])
-                    for t in digits4:
-                        if t == 0: # not possible
+            exclude.append(c)
+            for o in x:
+                if o in exclude:
+                    continue
+                exclude.append(o)
+                for e in x:
+                    if e in exclude:
+                        continue
+                    exclude.append(e)
+                    for t in x:
+                        if t in exclude or t == 0: # not possible
                             continue
-                        digits5 = digits4 - set([t])
-                        for r in digits5:
+                        exclude.append(t)
+                        for r in x:
+                            if r in exclude:
+                                continue
                             if satisfies_eq_one(a,c,o,n,e,t,i,r):
                                 vals = [a,c,o,n,e,t,i,r,b]
                                 possibilities.append(vals)
+                        exclude.pop()
+                    exclude.pop()
+                exclude.pop()
+            exclude.pop()
 
     return possibilities
 
