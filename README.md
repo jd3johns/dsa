@@ -4,6 +4,7 @@
 
 ### Graphs
 
+* The Labyrinth (connected component size with DFS): [C++](cpp/recursion/the_labyrinth.cpp)
 * Dijkstra's single-source shortest-paths algorithm: [Python](python/graphs/dijkstra.py)
 
 ### Sorting
