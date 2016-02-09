@@ -2,6 +2,10 @@
 
 ## Completed
 
+### Bit Manipulation
+
+* Integer add without arithmetic operators: [C++](cpp/bits/add.cpp)
+
 ### Graphs
 
 * The Labyrinth (connected component size with DFS): [C++](cpp/recursion/the_labyrinth.cpp)
