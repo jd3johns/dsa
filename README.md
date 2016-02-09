@@ -13,6 +13,7 @@
 
 ### Sorting
 
+* Deck shuffle: [C++](cpp/sorting/shuffle.cpp)
 * Mergesort: [Python](python/sorting/mergesort.py)
 * Heapsort: [Python](python/sorting/heapsort.py)
 * Bubble sort: [Python](python/sorting/bubble_sort.py)
