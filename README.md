@@ -5,6 +5,7 @@
 ### Bit Manipulation
 
 * Integer add without arithmetic operators: [C++](cpp/bits/add.cpp)
+* Bitfield manipulation functions (test, set, clear): [C++](cpp/bits/ops.cpp)
 
 ### Graphs
 
