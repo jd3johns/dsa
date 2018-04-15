@@ -1,3 +1,4 @@
+import logging
 import threading
 
 import pytest
@@ -5,25 +6,51 @@ import pytest
 from pool.pool import Pool
 
 
-@pytest.fixture(scope='module')
-def factory():
-    def fn():
-        return 1
-
-    return fn
+MAX_POOL_SIZE = 10
 
 
-def test_pool(factory):
-    p = Pool(factory, startsize=2, maxsize=10)
+@pytest.fixture(scope='function')
+def pool():
+    def factory():
+        return {}
 
-    assert not len(p.leased)
-    assert len(p.objs) == 2
-    assert p.total == 2
+    return Pool(factory, startsize=2, maxsize=MAX_POOL_SIZE)
 
+
+def test_pool_init(pool):
+    assert not len(pool.leased)
+    assert len(pool.objs) == 2
+    assert pool.total == 2
+
+
+def test_pool_relinquish(pool):
+    _id, _ = pool.lease()
+    assert len(pool.leased) == 1
+
+    for _ in range(3):
+        pool.lease()
+
+    assert len(pool.leased) == 4
+    assert pool.total == 4 + 1
+
+    pool.relinquish(_id)
+
+    assert len(pool.leased) == 3
+    assert pool.total == 4 + 1
+
+
+def test_pool_max(pool):
+    for _ in range(11):
+        pool.lease()
+
+    assert len(pool.leased) == MAX_POOL_SIZE
+
+
+def test_pool_threading(pool):
     def do_work():
-        _id, obj = p.lease()
-        obj += 1
-        p.relinquish(_id)
+        _id, obj = pool.lease()
+        obj['foo'] = 1
+        pool.relinquish(_id)
 
     threads = []
     for _ in range(1000):
@@ -34,6 +61,10 @@ def test_pool(factory):
     for t in threads:
         t.join()
 
-    assert not len(p.leased)
-    assert len(p.objs) == 10
-    assert p.total == 10
+    assert not len(pool.leased)
+    assert len(pool.objs) >= 2
+    assert pool.total >= 2
+
+    # State persists.
+    for obj in pool.objs:
+        assert obj.get('foo') == 1

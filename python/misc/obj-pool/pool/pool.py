@@ -1,6 +1,10 @@
+import logging
 import sys
 from collections import deque
 from threading import RLock
+
+
+LOGGER = logging.getLogger(__name__)
 
 
 class Pool():
@@ -47,12 +51,12 @@ class Pool():
                 _id = self.idgen()
                 self.leased[_id] = obj
 
-                print('leased %d' % _id)
+                LOGGER.debug('leased %d', _id)
                 return _id, obj
         except IndexError:
             # We've degraded to an inability to cache further.
             # TODO: Log warning: consider increasing maxsize.
-            print('could not lease')
+            LOGGER.debug('could not lease')
             return Pool.IdGenerator.NULL_ID, self.factory()
 
     def relinquish(self, _id):
@@ -60,7 +64,7 @@ class Pool():
         try:
             obj = self.leased.pop(_id)
             with self.lock:
-                print('relinquished %d' % _id)
+                LOGGER.debug('relinquished %d', _id)
                 self.objs.append(obj)
         except KeyError:
             pass
