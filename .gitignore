@@ -5,6 +5,7 @@ playpen/
 venv/
 *.pyc
 __pycache__/
+.pytest_cache/
 
 # C/C++
 *.o
